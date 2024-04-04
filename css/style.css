@@ -158,4 +158,46 @@ body {
 /*---------------------
     RIGHT-CONTAINER
 --------------------- */
-
+.col-right {
+    width: calc(100% - (100% / 3));
+    border-left: .0625rem solid #b1b1b1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.col-right .info {
+    padding-top: 3.625rem;
+    background-image: url(../img/mine.jpg);
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.chat-user {
+    display: flex;
+    align-content: center;
+}
+.chat-user .text-container>small {
+    color: #969494;
+}
+/*---------------------
+FOOTER-RIGHT-CONTAINER
+--------------------- */
+.app-footer {
+    height: 4.625rem;
+    padding: .625rem 0;
+    background-color: #f3eeea;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.app-footer .action {
+    margin: 0 2.5rem;
+    color: #6b7376;
+    font-size: 1.25rem;
+}
+.app-footer input {
+    height: 3.25rem;
+    padding-left: 1.125rem;
+    border: none;
+    border-radius: .3125rem;
+    flex-grow: 1;
+}
