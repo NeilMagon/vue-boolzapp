@@ -6,9 +6,85 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
+    <!-- APP-VUE -->
+    <div id="app">
+        <!-- MAIN-CONTAINER -->
+        <section class="container">
+            <div class="row">
+                <!-- LEFT-COL -->
+                <section class="col col-left">
+                    <!-- ACCOUNT-HEADER -->
+                    <div class="account">
+                        <div class="user">
+                            <div class="circle circle-small">
+                                <img src="img/avatar_io.jpg" alt="">
+                            </div>
+                            <span>Sofia</span>
+                        </div>
+                        <div class="action">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
+                    </div>
+                    <!-- /ACCOUNT-HEADER -->
+                    <div class="info">
+                        <!-- NOTIFICATIONS -->
+                        <div class="notif">
+                            <div class="circle circle-small">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                            <div class="text-container">
+                                <div>Ricevi notifiche di nuovi messaggi</div>
+                                <a href="#">Attiva notifiche desktop</a>
+                            </div>
+                        </div>
+                        <!-- /NOTIFICATIONS -->
+                        <!-- SEARCH-BAR -->
+                        <div class="search">
+                            <button type="button"><i class="fa-solid fa-search"></i></button>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                        <!-- /SEARCH-BAR -->
+                        <!-- CHAT-CONTAINER -->
+                        <div class="chat-container">
+                            <div class="chat">
+                                <div class="circle circle-big">
+                                    <img src="img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="text-container">
+                                    <div>Sofia</div>
+                                </div>
+                            </div>
+                            <div class="chat">
+                                <div class="circle circle-big">
+                                    <img src="img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="text-container">
+                                    <div>Sofia</div>
+                                </div>
+                            </div>
+                            <div class="chat">
+                                <div class="circle circle-big">
+                                    <img src="img/avatar_1.jpg" alt="">
+                                </div>
+                                <div class="text-container">
+                                    <div>Sofia</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /CHAT-CONTAINER -->
+                    </div>
+                </section>
+                <!-- LEFT-COL -->
+            </div>
+        </section>
+        <!-- /MAIN-CONTAINER -->
+    </div>
+    <!-- /APP-VUE -->
     <script src="js/script.js"></script>
 </body>
 </html>
