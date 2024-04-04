@@ -28,6 +28,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+          newChat: "",
           activeChat: 0,
             contacts: [{
                 name: 'Michele',
@@ -112,5 +113,15 @@ createApp({
         };
     },
     methods: {
+      addNewChat(){
+        if (this.newChat.trim() !== ``) {
+          this.contacts[this.activeChat].messages.push({
+            message: this.newChat,
+            date: '04/04/2024',
+            status: 'sent'
+          });
+          this.newChat = "";
+      }
+      }
     }
 }).mount('#app');
