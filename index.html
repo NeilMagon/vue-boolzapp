@@ -51,7 +51,8 @@
                         <!-- /SEARCH-BAR -->
                         <!-- CHAT-CONTAINER -->
                         <div class="chat-container">
-                            <div class="chat" v-for="contact, index in contacts">
+                            <div class="chat" v-for="contact, index in contacts" 
+                            @click="activeChat = index">
                                 <div class="circle circle-big">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
@@ -83,13 +84,10 @@
                     </div>
                     <div class="info">
                         <div class="message-container">
-                            <div class="message sent">
-                                    <p>Hai portato a spasso il cane?</p>
-                                    <small class="time">15.30</small>
-                            </div>
-                            <div class="message received">
-                                    <p>Tutto fatto!</p>
-                                    <small class="time">16.15</small>
+                            <div class="message" v-for="message in contacts[activeChat].messages"
+                            :class="{'sent': message.status === 'sent', 'received': message.status === 'received' }">
+                                    <p>{{message.message}}</p>
+                                    <small class="time">{{message.date}}</small>
                             </div>
                         </div>
                     </div>
