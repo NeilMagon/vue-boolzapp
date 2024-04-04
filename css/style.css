@@ -167,6 +167,8 @@ body {
 }
 .col-right .info {
     padding-top: 3.625rem;
+    padding-left: 3.625rem;
+    padding-right: 3.625rem;
     background-image: url(../img/mine.jpg);
     flex-grow: 1;
     overflow-y: auto;
@@ -175,9 +177,45 @@ body {
     display: flex;
     align-content: center;
 }
-.chat-user .text-container>small {
+small {
     color: #969494;
 }
+
+/*---------------------
+    MESSAGE-CONTAINER
+--------------------- */
+.message-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .625rem;
+}
+.message {
+    width: 20.25rem;
+    height: 3.5rem;
+    padding-left: 1.125rem;
+    padding-right: .5rem;
+    padding-bottom: .3125rem;
+    border-radius: .625rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sent {
+    background-color: #d5f9ba;
+    align-self: flex-end;
+}
+.time {
+    align-self: flex-end;
+    color: #969494;
+}
+.received {
+    background-color: #ffffff;
+    align-self: flex-start;
+}
+
 /*---------------------
 FOOTER-RIGHT-CONTAINER
 --------------------- */
