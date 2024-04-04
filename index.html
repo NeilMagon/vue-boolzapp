@@ -51,30 +51,13 @@
                         <!-- /SEARCH-BAR -->
                         <!-- CHAT-CONTAINER -->
                         <div class="chat-container">
-                            <div class="chat">
+                            <div class="chat" v-for="contact, index in contacts">
                                 <div class="circle circle-big">
-                                    <img src="img/avatar_1.jpg" alt="">
+                                    <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
                                 <div class="text-container">
-                                    <div>Sofia</div>
+                                    <div>{{contact.name}}</div>
                                 </div>
-                            </div>
-                            <div class="chat">
-                                <div class="circle circle-big">
-                                    <img src="img/avatar_1.jpg" alt="">
-                                </div>
-                                <div class="text-container">
-                                    <div>Sofia</div>
-                                </div>
-                            </div>
-                            <div class="chat">
-                                <div class="circle circle-big">
-                                    <img src="img/avatar_1.jpg" alt="">
-                                </div>
-                                <div class="text-container">
-                                    <div>Sofia</div>
-                                </div>
-                            </div>
                         </div>
                         <!-- /CHAT-CONTAINER -->
                     </div>
