@@ -74,7 +74,7 @@
                             </div>
                             <div class="text-container">
                                 <div>{{contacts[activeChat].name}}</div>
-                                <small>Ultimo accesso oggi alle 12:00</small>
+                                <small>Online</small>
                             </div>
                         </div>
                         <div class="action">
@@ -89,6 +89,13 @@
                             :class="{'sent': message.status === 'sent', 'received': message.status === 'received' }">
                                     <p>{{message.message}}</p>
                                     <small class="time">{{message.date}}</small>
+                                    <div class="dropdown">
+                                        <button class="drop-btn"><i class="fa-solid fa-chevron-down"></i></button>
+                                        <ul class="dropdown-menu">
+                                            <li class="dropdown-item">Info</li>
+                                            <li class="dropdown-item">Cancella</li>
+                                        </ul>
+                                    </div>
                             </div>
                         </div>
                     </div>
