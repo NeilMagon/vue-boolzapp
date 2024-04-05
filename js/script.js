@@ -131,5 +131,11 @@ createApp({
           }, 1000);
       }
       },
+      filterChat() {
+        const searchText = this.searchChat.trim().toLowerCase();
+        this.contacts.forEach(contact => {
+            contact.visible = contact.name.toLowerCase().includes(searchText);
+        });
+    }
     }
 }).mount('#app');

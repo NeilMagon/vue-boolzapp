@@ -45,14 +45,14 @@
                         <!-- /NOTIFICATIONS -->
                         <!-- SEARCH-BAR -->
                         <div class="search">
-                            <button type="button"><i class="fa-solid fa-search"></i></button>
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <button @click="filterChat" type="button"><i class="fa-solid fa-search"></i></button>
+                            <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchChat" @keyup.enter="filterChat">
                         </div>
                         <!-- /SEARCH-BAR -->
                         <!-- CHAT-CONTAINER -->
                         <div class="chat-container">
-                            <div class="chat" v-for="contact, index in contacts" 
-                            @click="activeChat = index">
+                            <div class="chat" v-for="contact, index in contacts"  :class="{'active': index == activeChat}"
+                                 @click="activeChat = index">
                                 <div class="circle circle-big">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
