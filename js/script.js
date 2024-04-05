@@ -137,6 +137,9 @@ createApp({
             contact.visible = contact.name.toLowerCase().includes(searchText);
         });
         console.log(this.contacts)
-    }
+      },
+      deleteMessage(index) {
+        this.contacts[this.activeChat].messages.splice(index, 1);
+      },
     }
 }).mount('#app');
