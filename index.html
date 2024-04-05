@@ -51,14 +51,15 @@
                         <!-- /SEARCH-BAR -->
                         <!-- CHAT-CONTAINER -->
                         <div class="chat-container">
-                            <div class="chat" v-for="contact, index in contacts"  :class="{'active': index == activeChat}"
-                                 @click="activeChat = index">
+                            <div class="chat" v-for="contact, index in contacts" v-show="contact.visible" 
+                                :class="{'active': index == activeChat}" @click="activeChat = index">
                                 <div class="circle circle-big">
                                     <img :src="'img/avatar' + contact.avatar + '.jpg'" alt="">
                                 </div>
                                 <div class="text-container">
                                     <div>{{contact.name}}</div>
                                 </div>
+                            </div>
                         </div>
                         <!-- /CHAT-CONTAINER -->
                     </div>

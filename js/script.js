@@ -133,9 +133,10 @@ createApp({
       },
       filterChat() {
         const searchText = this.searchChat.trim().toLowerCase();
-        this.contacts.forEach(contact => {
+        this.contacts.forEach((contact) => {
             contact.visible = contact.name.toLowerCase().includes(searchText);
         });
+        console.log(this.contacts)
     }
     }
 }).mount('#app');
