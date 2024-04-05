@@ -69,10 +69,10 @@
                     <div class="account">
                         <div class="chat-user">
                             <div class="circle circle-small">
-                                <img src="img/avatar_1.jpg" alt="">
+                                <img :src="'img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
                             </div>
                             <div class="text-container">
-                                <div>Sofia</div>
+                                <div>{{contacts[activeChat].name}}</div>
                                 <small>Ultimo accesso oggi alle 12:00</small>
                             </div>
                         </div>

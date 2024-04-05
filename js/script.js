@@ -28,6 +28,7 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+          searchChat:"",
           newChat: "",
           activeChat: 0,
             contacts: [{
