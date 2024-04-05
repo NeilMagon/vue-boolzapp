@@ -121,7 +121,14 @@ createApp({
             status: 'sent'
           });
           this.newChat = "";
+          setTimeout(() => {
+            this.contacts[this.activeChat].messages.push({
+              message: 'ok',
+              date: '04/04/2024',
+              status: 'received'
+            });
+          }, 1000);
       }
-      }
+      },
     }
 }).mount('#app');
