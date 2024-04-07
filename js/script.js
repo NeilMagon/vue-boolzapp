@@ -28,8 +28,11 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
+          // Creo una variabile dove l'utente cercherà la chat
           searchChat:"",
+          // Creo una variabile dove l'utente inserirà un nuovo messaggio
           newChat: "",
+          // Creo una variabile per selezionare la chat attiva tramite l'indice
           activeChat: 0,
             contacts: [{
                 name: 'Michele',
@@ -114,23 +117,27 @@ createApp({
         };
     },
     methods: {
+      // Creo una funzione per mostrare il nuovo messaggio inserito dall'utente
+      // e pusharlo nell'array message
       addNewChat(){
         if (this.newChat.trim() !== ``) {
           this.contacts[this.activeChat].messages.push({
             message: this.newChat,
-            date: '04/04/2024',
+            date: new Date().toLocaleString(),
             status: 'sent'
           });
           this.newChat = "";
+          // Creo una funzione di risposta automatica dopo 1 secondo
           setTimeout(() => {
             this.contacts[this.activeChat].messages.push({
               message: 'ok',
-              date: '04/04/2024',
+              date: new Date().toLocaleString(),
               status: 'received'
             });
           }, 1000);
       }
       },
+      // Creo una funzione per filtrare le chat, lasciando visibili solo quelle cercate dall'utente 
       filterChat() {
         const searchText = this.searchChat.trim().toLowerCase();
         this.contacts.forEach((contact) => {
@@ -138,6 +145,7 @@ createApp({
         });
         console.log(this.contacts)
       },
+      // Creo una funzione per cancellare il messaggio selezionato dall'utente
       deleteMessage(index) {
         this.contacts[this.activeChat].messages.splice(index, 1);
       },
